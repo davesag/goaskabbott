@@ -1,3 +1,7 @@
+.DS_Store
+.sass-cache/
+crash.log
+output/
 *.gem
 *.rbc
 .bundle

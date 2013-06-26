@@ -1,0 +1,58 @@
+---
+title: API
+heading: Developer access to the data.
+changefreq: monthly
+priority: 0.9
+image: developer_tools.png
+description:  API Documentation.
+keywords: 'API, documentation, data, json, feed'
+---
+:scss
+  .api-doc {
+    font-family: monospace;
+  }
+.row-fluid
+  .span12
+    %a.btn.btn-success.more-info.pull-right(href="/api.json") <i class="icon-wrench"></i> Get the raw data here
+    %p
+      Developers are encouraged to access the raw data feed
+      for display in unique and interesting ways.
+  %h3 Data Format
+  .well
+    %p<
+      The URL is
+      %code #{config[:base_url]}/api.json
+    %p The data is in <acronym title="Javascript Object Notation">JSON</a> format, encoded at UTF-8, as follows:
+    %dl.dl-horizontal.api-doc
+      %dt created_at
+      %dd The date and time the data file was generated, in UTC timezone
+      %dt count
+      %dd The number of Mr Abbott's team members listed
+      %dt team
+      %dd An array of Mr Abbott's team members
+      %dt questions
+      %dd An array of questions for the Opposition
+    .well
+      %p Mr Abbott's team members Array
+      %dl.dl-horizontal.api-doc
+        %dt code
+        %dd A unique code for this person, usually their name in lowercase with no spaces
+        %dt firstname
+        %dd The person's first name
+        %dt surname
+        %dd The person's last name
+        %dt position
+        %dd one of either 'senator' or 'member'
+        %dt twitter
+        %dd The person's twitter handle
+        %dt email
+        %dd The person's email address
+    .well
+      %p Questions Array
+      %dl.dl-horizontal.api-doc
+        %dt question
+        %dd The full text of the question
+        %dt tweet
+        %dd A shorter, tweetable version of the question
+        %dt tags
+        %dd An Array of twitter hash-tags.

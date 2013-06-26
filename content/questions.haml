@@ -1,0 +1,42 @@
+---
+title: Questions
+heading: A list of questions for the Opposition
+changefreq: daily
+priority: 0.9
+_image: 
+description:  This is a list of questions for the Opposition that the mainstream media are not asking.
+keywords: 'question'
+script: jquery.tablesorter.min.js,jquery.tablesorter.widgets.min.js,jquery.tablesorter.pager.min.js
+style: theme.bootstrap.css,jquery.tablesorter.pager.css
+---
+.row-fluid
+  %table.tablesorter<
+    %thead<
+      %tr<
+        %th< Question
+    %tfoot<
+      %tr<
+        %th.pager.form-horizontal
+          %button.btn.first(type="button")<
+            %i.icon-step-backward
+          %button.btn.prev(type="button")<
+            %i.icon-arrow-left
+          %span.pagedisplay
+          %button.btn.next(type="button")<
+            %i.icon-arrow-right
+          %button.btn.last(type="button")<
+            %i.icon-step-forward
+          %select.pagesize.input-mini(title="Select page size")<
+            %option(selected="selected" value="10") 10
+            %option(value="20") 20
+            %option(value="40") 40
+          %select.pagenum.input-mini(title="Select page number")
+    %tbody<
+      -questions.each_with_index do |q, i|
+        %tr<
+          %td< #{q[:question]}
+:javascript
+  $(function () {
+    $.extend($.tablesorter.themes.bootstrap, {table: 'table table-bordered', header: 'bootstrap-header', footerRow: '', footerCells: '', icons: '', sortNone: 'bootstrap-icon-unsorted', sortAsc: 'icon-chevron-up', sortDesc: 'icon-chevron-down', active: '', hover: '', filterRow: '', even: '', odd: ''});
+    $("table").tablesorter({theme: "bootstrap", headerTemplate: '{content} {icon}', widgets: [ "uitheme", "filter", "zebra" ], widgetOptions: { zebra: ["even", "odd"] }, headers: { 1: {sorter: false}}}).tablesorterPager({container: $(".pager"),cssGoto: ".pagenum",removeRows: false,output: '{startRow} - {endRow} / {filteredRows} ({totalRows})'});
+  })
