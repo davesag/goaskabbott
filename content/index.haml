@@ -3,7 +3,7 @@ title: Ask
 heading: Your chance to put questions to the Opposition.
 changefreq: daily
 priority: 0.9
-_image: 
+image: waskally_abbott@2x.png
 description:  This is your chance to put key questions to the opposition.
 keywords: 'go ask Abbott, auspol'
 ---
@@ -14,6 +14,7 @@ keywords: 'go ask Abbott, auspol'
     this.question = a_question;
     this.tweet = a_tweet;
     this.tags = some_tags;
+    this.tags.push('gaa');
     Question.all.push(this);
   }
   Question.all = [];
@@ -30,6 +31,7 @@ keywords: 'go ask Abbott, auspol'
 
   function to_email(a_question, a_person) {
     return  'Dear ' + ((a_person.position === 'senator') ? 'Senator' : 'Minister')
+          + ' ' + a_person.surname
           + ',\n\n'
           + 'In the event that the coalition wins the forthcoming election, I have the following question.\n\n'
           + a_question.question
@@ -127,9 +129,15 @@ keywords: 'go ask Abbott, auspol'
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
   });
 .row-fluid
+  %img.pull-right(src="/images/waskally_abbott@2x.png" height="225" width="225")
   %p.lead
     The Australian media has failed to hold the Opposition to account.
-    Here is a set of #{questions.size} questions you can tweet or email directly to key opposition members.
+    Here is a set of #{questions.size} questions you can tweet, or email directly, to Tony Abbott
+    and key members of his team.
+  %p.lead.text-success<
+    %strong< If the media won’t hold the opposition to account, it’s up to ordinary citizens like us.
+  %h3 Go Ask Abbott
+  %p Or members of his team.
 .row-fluid
   %form.form-horizontal
     .control-group
@@ -141,7 +149,7 @@ keywords: 'go ask Abbott, auspol'
       %select#for-whom
         %option(value='')< Choose…
     .control-group
-      %label.control-label(for="comm-type") For Whom :&nbsp;
+      %label.control-label(for="comm-type") Via :&nbsp;
       %select#comm-type
         %option(value='tweet')< Tweet
         %option(value='email')< Email

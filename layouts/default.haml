@@ -15,7 +15,7 @@
     -keywords = "#{config[:keywords]}, #{@item[:keywords]}"
     -generator = "nanoc version #{Nanoc::VERSION}"
     -url = "#{config[:base_url]}#{(@item.path === '/') ? '/index.html' : @item.path}"
-    -title = "#{@item[:heading]}"
+    -title = "#{site_name}: #{@item[:heading]}"
     -image = (@item[:image] == nil || @item[:image] == '' ? nil : "#{config[:base_url]}/images/#{@item[:image]}")
     %meta(charset="utf-8")
     -# core HTML 5 meta tags.
@@ -34,7 +34,7 @@
     %meta(property="og:description" content=description)
     -# twitter card meta tags
     %meta(property="twitter:card" content="summary")
-    %meta(property="twitter:site" content="@WHTGED4U")
+    %meta(property="twitter:site" content="@goaskabbott")
     %meta(property="twitter:creator" content="@davesag")
     %meta(property="twitter:domain"){:content => config[:base_domain]}
     -# some IE fiddles.
@@ -86,7 +86,7 @@
     .container(style="margin-top: 0;margin-bottom: 0;")<
       .masthead<
         =navigation
-        %h2.text-info #{title}
+        %h2.text-info #{@item[:heading]}
       #content
         =yield
       .row-fluid
@@ -95,8 +95,8 @@
             .span4
               .fb-like{:data => {:href => "http://goaskabbott.com/index.html", :width=>"100%", :send => 'false', :'show-faces' => 'false', :font => 'tahoma'}}
             .span4.offset1
-              %a.twitter-share-button{:href => "https://twitter.com/share", :data => {:url => "http://goaskabbott.com", :via => "GAA", :lang => "en-gb", :hashtags => "auspol, gaa"}} Tweet
-              %a.twitter-follow-button{:href => "https://twitter.com/GAA", :data => {:lang => "en-gb"}} Follow @GAA
+              %a.twitter-share-button{:href => "https://twitter.com/share", :data => {:url => "http://goaskabbott.com", :via => "goaskabbott", :lang => "en-gb", :hashtags => "auspol, gaa"}} Tweet
+              %a.twitter-follow-button{:href => "https://twitter.com/goaskabbott", :data => {:lang => "en-gb"}} Follow @goaskabbott
             .span2.offset1
               .g-plusone{:data => {:size=>"medium"}}
               %a(href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:129px; height:20px; background:url('http://platform.tumblr.com/v1/share_3.png') top left no-repeat transparent;") Share on Tumblr
