@@ -4,7 +4,7 @@ module NavigationHelper
 
   # the navigation items in order.
   # if you add content you must add it to this array.
-  NAV_ITEMS = ['/', '/questions/', '/team_list/', '/developers/']
+  NAV_ITEMS = ['/', '/developers/']
 
   def menu_item(text, target, attributes= {})
     # puts "#{text}, #{target}, #{attributes.inspect}"
