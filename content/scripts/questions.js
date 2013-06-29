@@ -55,8 +55,6 @@ function update_summary() {
       cv = $comm.val(),
       q = (qv >= 0) ? Question.all[qv] : null,
       t = (tv !== '') ? TeamMember.all[tv] : null;
-  console.log('Update using', qv, tv, cv);
-  console.log('Update with', q, t, cv);
   if ((q === null) || (t === null)) {
     $summary.addClass('alert-info').removeClass('alert-success alert-error');
     $send.addClass('disabled');
@@ -89,15 +87,17 @@ $(document).ready(function() {
   $comm = $("#comm-type");
   $summary = $("#summary");
   $send = $("#send");
-  var i, qi, q;
+  var i, qi, q, jdata;
   $.get('/api.json', function(data) {
-    for (i in data.questions) {
-      qi = data.questions[i];
+    if (typeof data === 'string') jdata = $.parseJSON(data)
+    else jdata = data;
+    for (i in jdata.questions) {
+      qi = jdata.questions[i];
       qu = new Question(qi.question, qi.tweet, qi.tags);
       $question.append("<option value='" + i + "'>" + qi.tweet + "</option>");
     }
-    for (i in data.team) {
-      qi = data.team[i];
+    for (i in jdata.team) {
+      qi = jdata.team[i];
       qu = new TeamMember(qi.code, qi.firstname, qi.surname, qi.position, qi.twitter, qi.email);
       $team.append("<option value='" + qi.code + "'>" + qi.firstname + ' ' + qi.surname +  "</option>");
     }
