@@ -16,11 +16,17 @@ function TeamMember(a_code, a_firstname, a_surname, a_position, a_twitter, an_em
   this.twitter = a_twitter;
   this.email = an_email;
   TeamMember.all[this.code] = this;
+  this.title = function() {
+    return (this.position === 'senator') ? 'Senator' : 'Minister';
+  }
+  this.fullname = function() {
+    return this.firstname + ' ' + this.surname;
+  }
 }
 TeamMember.all = {};
 
 function to_email(a_question, a_person) {
-  return  'Dear ' + ((a_person.position === 'senator') ? 'Senator' : 'Minister')
+  return  'Dear ' + a_person.title()
         + ' ' + a_person.surname
         + ',\n\n'
         + 'In the event that the coalition wins the forthcoming election, I have the following question.\n\n'
@@ -29,14 +35,14 @@ function to_email(a_question, a_person) {
 }
 
 function no_twitter(a_person) {
-  return ((a_person.position === 'senator') ? 'Senator' : 'Minister') + ' '
-          + a_person.firstname + ' ' + a_person.surname + ' has no twitter id.';
+  return a_person.title() + ' ' + a_person.fullname() + ' has no twitter id.';
 }
 
 function send_tweet(a_question, a_person) {
   var message = "https://twitter.com/intent/tweet?screen_name=@"
               + a_person.twitter
               + "&text=" + a_question.tweet
+              + ' http://goaskabbott.com'
               + "&hashtags=" + a_question.tags.join(',');
   window.open(message, "Send Tweet", "height=420,width=550");
 }
@@ -72,7 +78,7 @@ function update_summary() {
           hashtags.push('#' + q.tags[i]);
         }
         $summary.html('@' + t.twitter + ' ' + q.tweet
-                      + ' ' + hashtags.join(' '));
+                      + ' http://goaskabbott.com ' + hashtags.join(' '));
       } else {
         $summary.html('<pre>to: ' + t.email + '\n\n' + to_email(q, t) + '</pre>');
       }
@@ -99,7 +105,7 @@ $(document).ready(function() {
     for (i in jdata.team) {
       qi = jdata.team[i];
       qu = new TeamMember(qi.code, qi.firstname, qi.surname, qi.position, qi.twitter, qi.email);
-      $team.append("<option value='" + qi.code + "'>" + qi.firstname + ' ' + qi.surname +  "</option>");
+      $team.append("<option value='" + qu.code + "'>" + qu.fullname() +  "</option>");
     }
   }).error(function(err){
     console.log("error", err);

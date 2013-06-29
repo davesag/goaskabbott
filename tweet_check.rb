@@ -28,8 +28,8 @@ begin
     end
   end
   puts "longest tweet, including tags is #{lt[:tweet]} #{lt[:tags].join(' ')} — #{szb} charaters."
-  if sza + szb > 130
-    puts "tweet + tags + longest twitter name too long by #{130 - sza - szb} characters."
+  if sza + szb > 110
+    puts "tweet + tags + longest twitter name too long by #{110 - sza - szb} characters."
   else
     puts "all okay"
   end

@@ -29,7 +29,8 @@ module DataHelper
       }
     end
     {:created_at => Time.now.utc,
-     :count => items.size,
+     :team_count => team_list.size,
+     :question_count => questions.size,
      :team => t, :questions => q}.to_json
   end
 end

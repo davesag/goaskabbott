@@ -11,6 +11,7 @@
 </Files>
 
 AddType application/json .json
+
 AddCharset UTF-8 .html
 AddCharset UTF-8 .json
 AddCharset UTF-8 .js
