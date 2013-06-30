@@ -10,17 +10,22 @@ function Question(a_question, a_tweet, some_tags) {
   Question.all.push(this);
 }
 Question.all = [];
-function TeamMember(a_code, a_firstname, a_surname, a_position, a_role, a_twitter, an_email) {
+function TeamMember(a_code, a_firstname, a_surname, a_sex, a_position, some_roles, a_twitter, an_email) {
   this.code = a_code;
   this.firstname = a_firstname;
   this.surname = a_surname;
+  this.sex = a_sex;
   this.position = a_position;
-  this.role = a_role;
+  this.roles = some_roles;
   this.twitter = a_twitter;
   this.email = an_email;
   TeamMember.all[this.code] = this;
-  this.title = function() {
-    return (this.position === 'senator') ? 'Senator' : 'Minister';
+  this.address = function() {
+    if (this.position === 'senator') return 'Dear Senator ' + this.surname;
+    return 'Dear ' + this.honorific();
+  }
+  this.honorific = function() {
+    return ((this.sex === 'male') ? 'Mr' : 'Ms') + ' ' + this.surname;
   }
   this.fullname = function() {
     return this.firstname + ' ' + this.surname;
@@ -32,17 +37,18 @@ function TeamMember(a_code, a_firstname, a_surname, a_position, a_role, a_twitte
 TeamMember.all = {};
 
 function to_email(a_question, a_person) {
-  return  'Dear ' + a_person.title()
-        + ' ' + a_person.surname
+  return  a_person.address()
         + ',\n\n'
-        + 'I write to you in regards to your role as '
-        + a_person.role + '.\n\n'
+        + 'I write to you in regards to your role'
+        + ((a_person.roles.length >1) ? 's' : '')
+        + ' as '
+        + a_person.roles.join(', and ') + '.\n\n'
         + a_question.question
         + '\n\nYours faithfully\n\n{replace this with your name}';
 }
 
 function no_twitter(a_person) {
-  return a_person.title() + ' ' + a_person.fullname() + ' has no twitter id.';
+  return a_person.honorific() + ' has no twitter id.';
 }
 
 function send_tweet(a_question, a_person) {
@@ -129,8 +135,8 @@ $(document).ready(function() {
     }
     for (i in jdata.team) {
       qi = jdata.team[i];
-      qu = new TeamMember(qi.code, qi.firstname, qi.surname, qi.position, qi.role, qi.twitter, qi.email);
-      $team.append("<option value='" + qu.code + "'>" + qu.fullname() + " (" + qu.role + ")</option>");
+      qu = new TeamMember(qi.code, qi.firstname, qi.surname, qi.sex, qi.position, qi.roles, qi.twitter, qi.email);
+      $team.append("<option value='" + qu.code + "'>" + qu.fullname() + " (" + qu.roles.join(', ') + ")</option>");
     }
     update_summary();
   }).error(function(err){

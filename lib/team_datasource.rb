@@ -20,7 +20,8 @@ class TeamDataSource < Nanoc::DataSource
           :firstname => ach[:firstname],
           :surname => ach[:surname],
           :position => ach[:position],
-          :role => ach[:role],
+          :sex => ach[:sex],
+          :roles => ach[:roles],
           :twitter => ach[:twitter],
           :email => ach[:email]
         },
