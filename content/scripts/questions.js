@@ -10,11 +10,12 @@ function Question(a_question, a_tweet, some_tags) {
   Question.all.push(this);
 }
 Question.all = [];
-function TeamMember(a_code, a_firstname, a_surname, a_position, a_twitter, an_email) {
+function TeamMember(a_code, a_firstname, a_surname, a_position, a_role, a_twitter, an_email) {
   this.code = a_code;
   this.firstname = a_firstname;
   this.surname = a_surname;
   this.position = a_position;
+  this.role = a_role;
   this.twitter = a_twitter;
   this.email = an_email;
   TeamMember.all[this.code] = this;
@@ -34,8 +35,10 @@ function to_email(a_question, a_person) {
   return  'Dear ' + a_person.title()
         + ' ' + a_person.surname
         + ',\n\n'
+        + 'I write to you in regards to your role as '
+        + a_person.role + '.\n\n'
         + a_question.question
-        + '\n\nYours sincerely\n\n{your name here}';
+        + '\n\nYours faithfully\n\n{replace this with your name}';
 }
 
 function no_twitter(a_person) {
@@ -126,8 +129,8 @@ $(document).ready(function() {
     }
     for (i in jdata.team) {
       qi = jdata.team[i];
-      qu = new TeamMember(qi.code, qi.firstname, qi.surname, qi.position, qi.twitter, qi.email);
-      $team.append("<option value='" + qu.code + "'>" + qu.fullname() +  "</option>");
+      qu = new TeamMember(qi.code, qi.firstname, qi.surname, qi.position, qi.role, qi.twitter, qi.email);
+      $team.append("<option value='" + qu.code + "'>" + qu.fullname() + " (" + qu.role + ")</option>");
     }
     update_summary();
   }).error(function(err){

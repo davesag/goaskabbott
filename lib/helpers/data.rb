@@ -18,6 +18,7 @@ module DataHelper
         :firstname => ach[:firstname],
         :surname => ach[:surname],
         :position => ach[:position],
+        :role => ach[:role],
         :email => ach[:email]
       }
     end

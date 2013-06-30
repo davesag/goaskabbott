@@ -2,99 +2,119 @@
   :firstname: Tony
   :surname: Abbott
   :position: member
+  :role: Leader of the Opposition
   :email: tony.abbott.mp@aph.gov.au
 - :twitter: SenatorAbetz
   :firstname: Eric
   :surname: Abetz
   :position: senator
+  :role: Shadow Minister for Employment and Workplace Relations
   :email: senator.abetz@aph.gov.au
 - :twitter: kevinandrewsmp
   :firstname: Kevin
   :surname: Andrews
   :position: senator
+  :role: 'Shadow Minister for Families, Housing and Human Services'
   :email: kevin.andrews.mp@aph.gov.au
 - :twitter: BruceBillsonMP
   :firstname: Bruce
   :surname: Billson
   :position: member
+  :role: 'Shadow Minister for Small Business, Competition Policy and Consumer Affairs'
   :email: B.Billson.MP@aph.gov.au
 - :twitter: JulieBishopMP
   :firstname: Julie
   :surname: Bishop
   :position: member
+  :role: Shadow Minister for Foreign Affairs and Trade
   :email: julie.bishop.mp@aph.gov.au
 - :twitter: unavailable
   :firstname: George
   :surname: Brandis
   :position: senator
+  :role: 'Shadow Attorney-General, Shadow Minister for the Arts'
   :email: senator.brandis@aph.gov.au
 - :twitter: HonJohnCobbMP
   :firstname: John
   :surname: Cobb
   :position: member
+  :role: Shadow Minister for Agriculture and Food Security
   :email: John.Cobb.MP@aph.gov.au
 - :twitter: PeterDutton_MP
   :firstname: Peter
   :surname: Dutton
   :position: member
+  :role: Shadow Minister for Health and Ageing
   :email: Peter.Dutton.MP@aph.gov.au
 - :twitter: JoeHockey
   :firstname: Joe
   :surname: Hockey
   :position: member
+  :role: Shadow Treasurer
   :email: J.Hockey.MP@aph.gov.au
 - :twitter: GregHuntMP
   :firstname: Greg
   :surname: Hunt
   :position: member
+  :role: 'Shadow Minister for Climate Action, Environment and Heritage'
   :email: Greg.Hunt.MP@aph.gov.au
 - :twitter: unavailable
   :firstname: David
   :surname: Johnston
   :position: senator
+  :role: Shadow Minister for Defence
   :email: senator.johnston@aph.gov.au
 - :twitter: Barnaby_Joyce
   :firstname: Barnaby
   :surname: Joyce
   :position: senator
+  :role: 'Shadow Minister for Regional Development, Local Government and Water'
   :email: senator.joyce@aph.gov.au
 - :twitter: unavailable
   :firstname: Ian
   :surname: Mcfarlane
   :position: member
+  :role: Shadow Minister for Energy and Resources
   :email: Ian.Macfarlane.MP@aph.gov.au
 - :twitter: SMirabellaMP
   :firstname: Sophie
   :surname: Mirabella
   :position: member
+  :role: 'Shadow Minister for Innovation, Industry and Science'
   :email: sophie.mirabella.mp@aph.gov.au
 - :twitter: ScottMorrisonMP
   :firstname: Scott
   :surname: Morrison
   :position: member
+  :role: 'Shadow Minister for Productivity & Population, Immigration & Citizenship'
   :email: scott.morrison.mp@aph.gov.au
 - :twitter: unavailable
   :firstname: Christopher
   :surname: Pyne
   :position: member
+  :role: 'Shadow Minister for Education, Apprenticeships and Training'
   :email: C.Pyne.MP@aph.gov.au
 - :twitter: AndrewRobbMP
   :firstname: Andrew
   :surname: Robb
   :position: member
+  :role: 'Shadow Minister for Finance, Deregulation and Debt Reduction'
   :email: andrew.robb.mp@aph.gov.au
 - :twitter: unavailable
   :firstname: Nigel
   :surname: Scullion
   :position: senator
+  :role: 'Shadow Minister for Indigenous Affairs'
   :email: senator.scullion@aph.gov.au
 - :twitter: warrentrussmp
   :firstname: Warren
   :surname: Truss
   :position: member
+  :role: Shadow Minister for Infrastructure and Transport
   :email: W.Truss.MP@aph.gov.au
 - :twitter: TurnbullMalcolm
   :firstname: Malcolm
   :surname: Turnbull
   :position: member
+  :role: Shadow Minister for Communications and Broadband
   :email: malcolm.turnbull.mp@aph.gov.au
