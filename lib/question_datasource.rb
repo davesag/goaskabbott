@@ -18,6 +18,7 @@ class QuestionsDataSource < Nanoc::DataSource
       Nanoc3::Item.new(
         code,
         {
+          :code => code,
           :question => ach[:question],
           :tweet => ach[:tweet],
           :tags => ach[:tags]

@@ -8,6 +8,7 @@ begin
   longest = 0
   lt = nil
   sza = nil
+  all_tags = []
   team.each do |ach|
     sza = ach[:twitter].size
     if sza > longest
@@ -26,6 +27,7 @@ begin
       longest = szb
       lt = ach
     end
+    all_tags = all_tags | ach[:tags]
   end
   puts "longest tweet, including tags is #{lt[:tweet]} #{lt[:tags].join(' ')} — #{szb} charaters."
   if sza + szb > 110
@@ -33,6 +35,7 @@ begin
   else
     puts "all okay"
   end
+  puts all_tags.sort.join(', ')
 rescue => e
   puts e.message
   puts e.backtrace

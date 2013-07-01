@@ -20,11 +20,13 @@ module DataHelper
         :position => ach[:position],
         :roles => ach[:roles],
         :sex => ach[:sex],
-        :email => ach[:email]
+        :email => ach[:email],
+        :tags => ach[:tags]
       }
     end
     q = questions.map do |ach|
       {
+        :code => ach[:code],
         :question => ach[:question],
         :tweet => ach[:tweet],
         :tags => ach[:tags]

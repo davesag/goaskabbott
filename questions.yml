@@ -10,10 +10,12 @@
   :tweet: How exactly will the coalition ‘stop the boats’?
   :tags:
     - refugees
+    - defence
 - :question: Given the small impact of the carbon tax on electricity prices what will a coalition government do to bring down electricity prices?
   :tweet: Given the small impact of a carbon price, how will the coalition reduce electricity prices?
   :tags:
     - carbon
+    - infrastructure
 - :question: How will a coalition government improve the living standards of low income people?
   :tweet: How will the coalition improve living standards for low income people?
   :tags:
@@ -74,7 +76,7 @@
   :tweet: How will the coalition reduce the death toll on Australia’s roads?
   :tags:
     - roadtoll
-    - saftey
+    - safety
 - :question: How would a coalition government reduce the rate of youth suicide in Australia?
   :tweet: How will the coalition reduce the youth suicide rate?
   :tags:
@@ -84,6 +86,8 @@
   :tweet: How would the coalition prevent widening inequalities in income, education and access to technology?
   :tags:
     - inequality
+    - nbn
+    - education
 - :question: How would a coalition government address the serious issue of alcohol fuelled violence in communities?
   :tweet: How will the coalition address alcohol fuelled violence in communities?
   :tags:
@@ -100,6 +104,7 @@
   :tweet: How will the coalition ensure equal opportunity for all Australians?
   :tags:
     - equality
+    - employment
 - :question: What would a coalition government do to return the focus of government to governing, rather than focusing on the personality cult of leadership?
   :tweet: Will the coalition focus on governing, rather than the personality cult of leadership?
   :tags:
@@ -108,6 +113,7 @@
   :tweet: How will the coalition maximise the benefits of mining for all Australians?
   :tags:
     - mining
+    - tax
 - :question: What would a coalition government do to ensure a planned transition to a low carbon society?
   :tweet: How will the coalition ensure a planned transition to a low carbon society?
   :tags:
@@ -116,11 +122,14 @@
   :tweet: What is the coalition’s plan to wean Australia off coal?
   :tags:
     - climate
+    - carbon
     - renewables
+    - mining
 - :question: What would a coalition government do to enhance health services to rural communities? What is their plan?
   :tweet: How will the coalition enhance health services to rural communities?
   :tags:
     - health
+    - nbn
 - :question: What would a coalition government do to reduce the burden of spiralling higher education costs on young people?
   :tweet: How will the coalition reduce spiralling higher education costs?
   :tags:
@@ -138,10 +147,12 @@
   :tweet: How would the coalition deal with an ally who spies on Australians?
   :tags:
     - spies
+    - defence
 - :question: Why won’t Tony Abbott go on Q and A? Why won’t he go on the 7:30 report?
   :tweet:  Why won’t Tony Abbott go on Q&A? Why won’t he go on the 7:30 report?
   :tags:
     - qanda
+    - accountability
 - :question: What specific aspects of the current government’s asylum seeker policy would a coalition government keep?
   :tweet: What aspects of the current government’s asylum seeker policy will the coalition retain?
   :tags:

@@ -23,7 +23,8 @@ class TeamDataSource < Nanoc::DataSource
           :sex => ach[:sex],
           :roles => ach[:roles],
           :twitter => ach[:twitter],
-          :email => ach[:email]
+          :email => ach[:email],
+          :tags => ach[:tags]
         },
         "/team_details/#{code}",
         {:binary => false}
