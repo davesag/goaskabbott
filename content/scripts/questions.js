@@ -88,6 +88,12 @@ function TeamMember(a_code, a_firstname, a_surname, a_sex, a_position, some_role
 }
 TeamMember.all = {};
 
+function personalise(text, who) {
+  var pn = who.fullname(), qt = text;
+  if (qt.indexOf(pn) >= 0) qt = qt.replace(pn, 'you');
+  return qt;
+}
+
 function to_email(a_question, a_person) {
   return  a_person.address()
         + ',\n\n'
@@ -95,7 +101,7 @@ function to_email(a_question, a_person) {
         + ((a_person.roles.length >1) ? 's' : '')
         + ' as '
         + a_person.roles.join(', and ') + '.\n\n'
-        + a_question.question
+        + personalise(a_question.question, a_person)
         + '\n\nYours faithfully\n\n' + $you.val();
 }
 
@@ -106,7 +112,7 @@ function no_twitter(a_person) {
 function send_tweet(a_question, a_person) {
   var message = "https://twitter.com/intent/tweet?screen_name=@"
               + a_person.twitter
-              + "&text=" + encodeURIComponent(a_question.tweet + ' http://goaskabbott.com')
+              + "&text=" + encodeURIComponent(personalise(a_question.tweet, a_person) + ' http://goaskabbott.com')
               + "&hashtags=" + a_question.tags.join(',');
   window.open(message, "Send Tweet", "height=420,width=550");
 }
@@ -121,7 +127,8 @@ function send_email(a_question, a_person) {
 
 function summary_info_text(state) {
   if (state === NO_TWEET) return 'Please choose a different person or communication type';
-  return 'A new ' + $comm.val() + ' will be created externally to this page which you may edit and send';
+  if ($comm.val() === 'tweet') return 'A new tweet will be created via twitter.com which you may edit and send';
+  return 'A new email will be created in your default email client, which you may edit and send';
 }
 
 function update_summary_status(state, q, t) {
@@ -146,7 +153,7 @@ function update_summary_status(state, q, t) {
       $summary.removeClass('alert-info alert-error').addClass('alert-success');
       $send.removeClass('disabled');
       if ($comm.val() === 'tweet') {
-        $summary.html('@' + t.twitter + ' ' + q.tweet
+        $summary.html('@' + t.twitter + ' ' + personalise(q.tweet, t)
                       + ' http://goaskabbott.com ' + q.hashtags.join(' '));
       } else {
         $summary.html('<pre>to: ' + t.email + '\n\n' + to_email(q, t) + '</pre>');
