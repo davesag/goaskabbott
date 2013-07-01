@@ -21,5 +21,4 @@ and point your web browser at http://localhost:3000
 
 # Authorisations
 
-This is neither authorised, nor endorsed by any political party. It's just a collection of facts and opinions.
-
+This is neither authorised, nor endorsed by any political party. It's just a collection of questions and a mechanism to send them.
