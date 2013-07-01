@@ -1,5 +1,14 @@
-var $question, $team, $comm, $summary, $send, $info,
+var $question, $team, $comm, $summary, $send, $info, $you,
     INCOMPLETE = 0, NO_TWEET = 1, OK = 2;
+
+function rot13(s) {
+  return (s ? s : this).split('').map(function(es) {
+    if (!es.match(/[A-za-z]/)) return es;
+    c = Math.floor(es.charCodeAt(0) / 97);
+    k = (es.toLowerCase().charCodeAt(0) - 83) % 26 || 26;
+    return String.fromCharCode(k + ((c == 0) ? 64 : 96));
+  }).join('');
+}
 
 function Question(a_question, a_tweet, some_tags) {
   this.question = a_question;
@@ -44,7 +53,7 @@ function to_email(a_question, a_person) {
         + ' as '
         + a_person.roles.join(', and ') + '.\n\n'
         + a_question.question
-        + '\n\nYours faithfully\n\n{replace this with your name}';
+        + '\n\nYours faithfully\n\n' + $you.val();
 }
 
 function no_twitter(a_person) {
@@ -109,11 +118,14 @@ function update_summary() {
   var qv = parseInt($question.val()),
       tv = $team.val(),
       cv = $comm.val(),
+      yv = $you.val(),
       q = (qv >= 0) ? Question.all[qv] : null,
       t = (tv !== '') ? TeamMember.all[tv] : null;
-  if ((q === null) || (t === null)) update_summary_status(INCOMPLETE, q, t)
+  if ((q === null) || (t === null) || (yv === '' && cv === 'email')) update_summary_status(INCOMPLETE, q, t)
   else if (t.no_twitter() && cv === 'tweet') update_summary_status(NO_TWEET, q, t)
   else update_summary_status(OK, q, t);
+  if (cv === 'tweet') $you.parent().hide()
+  else $you.parent().show();
 }
 
 $(document).ready(function() {
@@ -124,7 +136,9 @@ $(document).ready(function() {
   $summary = $("#summary");
   $send = $("#send");
   $info = $("#info");
-  var i, qi, q, jdata;
+  $you = $("#your-name");
+  var i, qi, q, jdata, saved_name = $.cookie('gaa_n');
+  if (saved_name != null && saved_name !== '') $you.val(rot13(saved_name));
   $.get('/api.json', function(data) {
     if (typeof data === 'string') jdata = $.parseJSON(data)
     else jdata = data;
@@ -142,7 +156,7 @@ $(document).ready(function() {
   }).error(function(err){
     console.log("error", err);
   });
-  $("select").change(function(event) {
+  $("select, input").change(function(event) {
     update_summary()
   });
   $send.click(function(event) {
@@ -151,6 +165,8 @@ $(document).ready(function() {
         cv = $comm.val(),
         q = (qv >= 0) ? Question.all[qv] : null,
         t = (tv !== '') ? TeamMember.all[tv] : null;
+    if ($you.val() !== '') $.cookie('gaa_n', rot13($you.val()))
+    else $.removeCookie('gaa_n');
     if ($comm.val() === 'tweet') send_tweet(q,t)
     else send_email(q,t);
   });

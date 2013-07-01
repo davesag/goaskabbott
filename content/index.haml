@@ -6,7 +6,7 @@ priority: 0.9
 image: popup_abbott@2x.png
 description:  Simple tools enabling citizen journalism.
 keywords: 'go ask Abbott, auspol, journalism'
-script: questions.js
+script: jquery.cookie.js,questions.js
 ---
 .row-fluid
   %img.pull-right(src="/images/popup_abbott@2x.png" height="225" width="225")
@@ -33,6 +33,10 @@ script: questions.js
       %select#comm-type
         %option(value='tweet')< Tweet
         %option(value='email')< Email
+    .control-group
+      %label.control-label(for="your-name") Your Name :&nbsp;
+      %input#your-name(type="text" pattern="^[A-Z][a-z A-Z]+$")
+      %p.help-inline This is not saved to any server, just used to fill in the email text.
     #summary.well.alert-info
     .form-actions
       %button#send.btn.btn-primary(type='button') Send
