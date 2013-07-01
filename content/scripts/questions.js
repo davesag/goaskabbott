@@ -119,9 +119,8 @@ function send_tweet(a_question, a_person) {
 
 function send_email(a_question, a_person) {
   var message = 'mailto:' + encodeURIComponent(a_person.email)
-              + '?subject=' + encodeURIComponent(a_question.tweet)
+              + '?subject=' + encodeURIComponent(personalise(a_question.tweet, a_person))
               + '&body=' + encodeURIComponent(to_email(a_question, a_person));
-  console.log(message);
   window.open(message);
 }
 
@@ -224,16 +223,16 @@ $(document).ready(function() {
     }
     update_summary();
   }).error(function(err){
-    console.log("error", err);
+    console.error("error", err);
   });
   $("select, input").change(function(event) {
     update_summary()
   });
   $send.click(function(event) {
-    var qv = parseInt($question.val()),
+    var qv = $question.val(),
         tv = $team.val(),
         cv = $comm.val(),
-        q = (qv >= 0) ? Question.all[qv] : null,
+        q = (qv !== '') ? Question.all[qv] : null,
         t = (tv !== '') ? TeamMember.all[tv] : null;
     if ($you.val() !== '') $.cookie('gaa_n', rot13($you.val()))
     else $.removeCookie('gaa_n');

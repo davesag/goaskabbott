@@ -16,6 +16,7 @@ begin
       lt = ach
     end
   end
+  sza = longest
   puts "longest twitter handle is #{lt[:twitter]} — #{sza} charaters."
   questions = YAML.load(File.read('questions.yml'))
   # puts achievements.inspect
@@ -29,9 +30,11 @@ begin
     end
     all_tags = all_tags | ach[:tags]
   end
+  szb = longest
   puts "longest tweet, including tags is #{lt[:tweet]} #{lt[:tags].join(' ')} — #{szb} charaters."
-  if sza + szb > 110
-    puts "tweet + tags + longest twitter name too long by #{110 - sza - szb} characters."
+  extra_chars = ' http://goaskabbott.com #gaa '.size
+  if sza + szb + extra_chars > 140
+    puts "tweet + tags + longest twitter name too long by #{140 - sza - szb - extra_chars} characters."
   else
     puts "all okay"
   end
