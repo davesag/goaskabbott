@@ -22,6 +22,8 @@ ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
 
 RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^www.*$
+RewriteRule ^(.*)$ http://goaskabbott.com/$1 [R]
 RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR] 
 RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR] 
 RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR] 
