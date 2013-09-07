@@ -3,242 +3,242 @@
   :surname: Abbott
   :position: member
   :roles:
-    - Leader of the Opposition
+    - Incoming Prime Minister
   :sex: male
   :email: tony.abbott.mp@aph.gov.au
   :tags:
     - carbon
     - economy
     - leadership
-- :twitter: SenatorAbetz
-  :firstname: Eric
-  :surname: Abetz
-  :position: senator
-  :roles:
-    - Leader of the Opposition in the Senate
-    - Shadow Minister for Employment and Workplace Relations
-  :sex: male
-  :email: senator.abetz@aph.gov.au
-  :tags:
-    - employment
-    - equality
-    - unions
-- :twitter: kevinandrewsmp
-  :firstname: Kevin
-  :surname: Andrews
-  :position: senator
-  :roles:
-    - 'Shadow Minister for Families, Housing and Human Services'
-  :sex: male
-  :email: kevin.andrews.mp@aph.gov.au
-  :tags:
-    - fairness
-    - health
-    - battlers
-- :twitter: BruceBillsonMP
-  :firstname: Bruce
-  :surname: Billson
-  :position: member
-  :roles:
-    - 'Shadow Minister for Small Business, Competition Policy and Consumer Affairs'
-  :sex: male
-  :email: B.Billson.MP@aph.gov.au
-  :tags:
-    - economy
-    - employment
-    - laws
-- :twitter: JulieBishopMP
-  :firstname: Julie
-  :surname: Bishop
-  :position: member
-  :roles:
-    - Deputy Leader of the Opposition
-    - Shadow Minister for Foreign Affairs and Trade
-  :sex: female
-  :email: julie.bishop.mp@aph.gov.au
-  :tags:
-    - worldstage
-    - economy
-    - globalisation
-- :twitter: unavailable
-  :firstname: George
-  :surname: Brandis
-  :position: senator
-  :roles:
-    - Shadow Attorney-General
-    - Shadow Minister for the Arts
-  :sex: male
-  :email: senator.brandis@aph.gov.au
-  :tags:
-    - laws
-    - youth
-    - accountability
-- :twitter: HonJohnCobbMP
-  :firstname: John
-  :surname: Cobb
-  :position: member
-  :roles: 
-    - Shadow Minister for Agriculture and Food Security
-  :sex: male
-  :email: John.Cobb.MP@aph.gov.au
-  :tags:
-    - climate
-    - globalisation
-    - carbon
-- :twitter: PeterDutton_MP
-  :firstname: Peter
-  :surname: Dutton
-  :position: member
-  :roles:
-     - Shadow Minister for Health and Ageing
-  :sex: male
-  :email: Peter.Dutton.MP@aph.gov.au
-  :tags:
-    - health
-    - equality
-    - inequality
-- :twitter: JoeHockey
-  :firstname: Joe
-  :surname: Hockey
-  :position: member
-  :roles: 
-    - Shadow Treasurer
-  :sex: male
-  :email: J.Hockey.MP@aph.gov.au
-  :tags:
-    - economy
-    - globalisation
-    - tax
-- :twitter: GregHuntMP
-  :firstname: Greg
-  :surname: Hunt
-  :position: member
-  :roles:
-    - 'Shadow Minister for Climate Action, Environment and Heritage'
-  :sex: male
-  :email: Greg.Hunt.MP@aph.gov.au
-  :tags:
-    - carbon
-    - climate
-    - firstaustralians
-- :twitter: unavailable
-  :firstname: David
-  :surname: Johnston
-  :position: senator
-  :roles:
-    - Shadow Minister for Defence
-  :sex: male
-  :email: senator.johnston@aph.gov.au
-  :tags:
-    - defence
-    - worldstage
-    - spies
-- :twitter: Barnaby_Joyce
-  :firstname: Barnaby
-  :surname: Joyce
-  :position: senator
-  :roles:
-    - 'Shadow Minister for Regional Development, Local Government and Water'
-  :sex: male
-  :email: senator.joyce@aph.gov.au
-  :tags:
-    - firstaustralians
-    - nbn
-    - environment
-- :twitter: unavailable
-  :firstname: Ian
-  :surname: Mcfarlane
-  :position: member
-  :roles: 
-    - Shadow Minister for Energy and Resources
-  :sex: male
-  :email: Ian.Macfarlane.MP@aph.gov.au
-  :tags:
-    - mining
-    - carbon
-    - renewables
-- :twitter: SMirabellaMP
-  :firstname: Sophie
-  :surname: Mirabella
-  :position: member
-  :roles:
-    - 'Shadow Minister for Innovation, Industry and Science'
-  :sex: female
-  :email: sophie.mirabella.mp@aph.gov.au
-  :tags:
-    - innovation
-    - education
-    - renewables
-- :twitter: ScottMorrisonMP
-  :firstname: Scott
-  :surname: Morrison
-  :position: member
-  :roles:
-    - 'Shadow Minister for Productivity & Population, Immigration & Citizenship'
-  :sex: male
-  :email: scott.morrison.mp@aph.gov.au
-  :tags:
-    - refugees
-    - education
-    - asia
-- :twitter: unavailable
-  :firstname: Christopher
-  :surname: Pyne
-  :position: member
-  :roles:
-    - 'Shadow Minister for Education, Apprenticeships and Training'
-    - Manager of Opposition Business in the House
-  :sex: male
-  :email: C.Pyne.MP@aph.gov.au
-  :tags:
-    - education
-    - jobs
-    - youth
-- :twitter: AndrewRobbMP
-  :firstname: Andrew
-  :surname: Robb
-  :position: member
-  :roles:
-    - 'Shadow Minister for Finance, Deregulation and Debt Reduction'
-  :sex: male
-  :email: andrew.robb.mp@aph.gov.au
-  :tags:
-    - economy
-    - tax
-    - unions
-- :twitter: unavailable
-  :firstname: Nigel
-  :surname: Scullion
-  :position: senator
-  :roles:
-    - Shadow Minister for Indigenous Affairs
-  :sex: male
-  :email: senator.scullion@aph.gov.au
-  :tags:
-    - firstaustralians
-    - inequality
-    - education
-- :twitter: warrentrussmp
-  :firstname: Warren
-  :surname: Truss
-  :position: member
-  :roles:
-    - Shadow Minister for Infrastructure and Transport
-  :sex: male
-  :email: W.Truss.MP@aph.gov.au
-  :tags:
-    - mining
-    - safety
-    - carbon
-- :twitter: TurnbullMalcolm
-  :firstname: Malcolm
-  :surname: Turnbull
-  :position: member
-  :roles:
-    - Shadow Minister for Communications and Broadband
-  :sex: male
-  :email: malcolm.turnbull.mp@aph.gov.au
-  :tags:
-    - nbn
-    - innovation
-    - renewables
+# - :twitter: SenatorAbetz
+#   :firstname: Eric
+#   :surname: Abetz
+#   :position: senator
+#   :roles:
+#     - Leader of the Opposition in the Senate
+#     - Shadow Minister for Employment and Workplace Relations
+#   :sex: male
+#   :email: senator.abetz@aph.gov.au
+#   :tags:
+#     - employment
+#     - equality
+#     - unions
+# - :twitter: kevinandrewsmp
+#   :firstname: Kevin
+#   :surname: Andrews
+#   :position: senator
+#   :roles:
+#     - 'Shadow Minister for Families, Housing and Human Services'
+#   :sex: male
+#   :email: kevin.andrews.mp@aph.gov.au
+#   :tags:
+#     - fairness
+#     - health
+#     - battlers
+# - :twitter: BruceBillsonMP
+#   :firstname: Bruce
+#   :surname: Billson
+#   :position: member
+#   :roles:
+#     - 'Shadow Minister for Small Business, Competition Policy and Consumer Affairs'
+#   :sex: male
+#   :email: B.Billson.MP@aph.gov.au
+#   :tags:
+#     - economy
+#     - employment
+#     - laws
+# - :twitter: JulieBishopMP
+#   :firstname: Julie
+#   :surname: Bishop
+#   :position: member
+#   :roles:
+#     - Deputy Leader of the Opposition
+#     - Shadow Minister for Foreign Affairs and Trade
+#   :sex: female
+#   :email: julie.bishop.mp@aph.gov.au
+#   :tags:
+#     - worldstage
+#     - economy
+#     - globalisation
+# - :twitter: unavailable
+#   :firstname: George
+#   :surname: Brandis
+#   :position: senator
+#   :roles:
+#     - Shadow Attorney-General
+#     - Shadow Minister for the Arts
+#   :sex: male
+#   :email: senator.brandis@aph.gov.au
+#   :tags:
+#     - laws
+#     - youth
+#     - accountability
+# - :twitter: HonJohnCobbMP
+#   :firstname: John
+#   :surname: Cobb
+#   :position: member
+#   :roles: 
+#     - Shadow Minister for Agriculture and Food Security
+#   :sex: male
+#   :email: John.Cobb.MP@aph.gov.au
+#   :tags:
+#     - climate
+#     - globalisation
+#     - carbon
+# - :twitter: PeterDutton_MP
+#   :firstname: Peter
+#   :surname: Dutton
+#   :position: member
+#   :roles:
+#      - Shadow Minister for Health and Ageing
+#   :sex: male
+#   :email: Peter.Dutton.MP@aph.gov.au
+#   :tags:
+#     - health
+#     - equality
+#     - inequality
+# - :twitter: JoeHockey
+#   :firstname: Joe
+#   :surname: Hockey
+#   :position: member
+#   :roles: 
+#     - Shadow Treasurer
+#   :sex: male
+#   :email: J.Hockey.MP@aph.gov.au
+#   :tags:
+#     - economy
+#     - globalisation
+#     - tax
+# - :twitter: GregHuntMP
+#   :firstname: Greg
+#   :surname: Hunt
+#   :position: member
+#   :roles:
+#     - 'Shadow Minister for Climate Action, Environment and Heritage'
+#   :sex: male
+#   :email: Greg.Hunt.MP@aph.gov.au
+#   :tags:
+#     - carbon
+#     - climate
+#     - firstaustralians
+# - :twitter: unavailable
+#   :firstname: David
+#   :surname: Johnston
+#   :position: senator
+#   :roles:
+#     - Shadow Minister for Defence
+#   :sex: male
+#   :email: senator.johnston@aph.gov.au
+#   :tags:
+#     - defence
+#     - worldstage
+#     - spies
+# - :twitter: Barnaby_Joyce
+#   :firstname: Barnaby
+#   :surname: Joyce
+#   :position: senator
+#   :roles:
+#     - 'Shadow Minister for Regional Development, Local Government and Water'
+#   :sex: male
+#   :email: senator.joyce@aph.gov.au
+#   :tags:
+#     - firstaustralians
+#     - nbn
+#     - environment
+# - :twitter: unavailable
+#   :firstname: Ian
+#   :surname: Mcfarlane
+#   :position: member
+#   :roles: 
+#     - Shadow Minister for Energy and Resources
+#   :sex: male
+#   :email: Ian.Macfarlane.MP@aph.gov.au
+#   :tags:
+#     - mining
+#     - carbon
+#     - renewables
+# - :twitter: SMirabellaMP
+#   :firstname: Sophie
+#   :surname: Mirabella
+#   :position: member
+#   :roles:
+#     - 'Shadow Minister for Innovation, Industry and Science'
+#   :sex: female
+#   :email: sophie.mirabella.mp@aph.gov.au
+#   :tags:
+#     - innovation
+#     - education
+#     - renewables
+# - :twitter: ScottMorrisonMP
+#   :firstname: Scott
+#   :surname: Morrison
+#   :position: member
+#   :roles:
+#     - 'Shadow Minister for Productivity & Population, Immigration & Citizenship'
+#   :sex: male
+#   :email: scott.morrison.mp@aph.gov.au
+#   :tags:
+#     - refugees
+#     - education
+#     - asia
+# - :twitter: unavailable
+#   :firstname: Christopher
+#   :surname: Pyne
+#   :position: member
+#   :roles:
+#     - 'Shadow Minister for Education, Apprenticeships and Training'
+#     - Manager of Opposition Business in the House
+#   :sex: male
+#   :email: C.Pyne.MP@aph.gov.au
+#   :tags:
+#     - education
+#     - jobs
+#     - youth
+# - :twitter: AndrewRobbMP
+#   :firstname: Andrew
+#   :surname: Robb
+#   :position: member
+#   :roles:
+#     - 'Shadow Minister for Finance, Deregulation and Debt Reduction'
+#   :sex: male
+#   :email: andrew.robb.mp@aph.gov.au
+#   :tags:
+#     - economy
+#     - tax
+#     - unions
+# - :twitter: unavailable
+#   :firstname: Nigel
+#   :surname: Scullion
+#   :position: senator
+#   :roles:
+#     - Shadow Minister for Indigenous Affairs
+#   :sex: male
+#   :email: senator.scullion@aph.gov.au
+#   :tags:
+#     - firstaustralians
+#     - inequality
+#     - education
+# - :twitter: warrentrussmp
+#   :firstname: Warren
+#   :surname: Truss
+#   :position: member
+#   :roles:
+#     - Shadow Minister for Infrastructure and Transport
+#   :sex: male
+#   :email: W.Truss.MP@aph.gov.au
+#   :tags:
+#     - mining
+#     - safety
+#     - carbon
+# - :twitter: TurnbullMalcolm
+#   :firstname: Malcolm
+#   :surname: Turnbull
+#   :position: member
+#   :roles:
+#     - Shadow Minister for Communications and Broadband
+#   :sex: male
+#   :email: malcolm.turnbull.mp@aph.gov.au
+#   :tags:
+#     - nbn
+#     - innovation
+#     - renewables
