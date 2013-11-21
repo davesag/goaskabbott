@@ -1,7 +1,7 @@
 goaskabbott
 ===========
 
-A simple website that provides an easy way for members of the public to pose a set of questions to the federal Opposition.
+A simple website that provides an easy way for members of the public to pose a set of questions to the Australian Federal Government.
 
 To contribute, either fork as per usual and post pull requests, or open a new issue with your suggestions and I'll add 'em.
 
